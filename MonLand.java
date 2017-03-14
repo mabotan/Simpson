@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MonLand extends Monster
 {
-    private int speed = 5;
+    private int speed = 7;
     int x=1;
     int delay=5;
     int countDelay=3;

@@ -97,12 +97,11 @@ public class Sky extends World
     
     public void randomMonster(){
     int m = Greenfoot.getRandomNumber(200);
-    if(m==20){
+    if(m==70){
         addObject(new MonFly(), 744, 196);
-    }else if(m==10){
+    }else if(m==50){
         addObject(new MonLand(), 797, 430);
-    }else if(m==10){
-        addObject(new MonBig(), 797, 430);
+    
     }
     
     }

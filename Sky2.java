@@ -95,10 +95,10 @@ public class Sky2 extends World
     }
     
     public void randomMonster(){
-    int m = Greenfoot.getRandomNumber(200);
-    if(m==100){
+    int m = Greenfoot.getRandomNumber(100);
+    if(m==38){
         addObject(new MonFly(), 744, 196);
-    }else if(m==80){
+    }else if(m==20){
         addObject(new MonLand(), 797, 430);
     }
     }

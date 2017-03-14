@@ -8,10 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MonBig extends Monster
 {
-   private int speed = 5;
+   private int speed = 9;
     int x=1;
     int delay=5;
-    int countDelay=3;
+    int countDelay=1;
     
     /**
      * Act - do whatever the MonLand wants to do. This method is called whenever
