@@ -11,7 +11,7 @@ public class Sky extends World
     public int BartPosX;
     public int BartPosY; 
     private int score=0;
-    public static GreenfootSound music = new GreenfootSound("Candy.wav");
+    public static GreenfootSound music = new GreenfootSound("pataponsound.mp3");
    
     
     /**
@@ -91,7 +91,7 @@ public class Sky extends World
             a=0;
             Greenfoot.playSound("good.mp3");
         }else a--;*/
-    
+  
         
     }
     
@@ -116,8 +116,10 @@ public class Sky extends World
     public boolean isTimeout(){
         return timeout;
     }
+    
+    }
 
-}
+
 
 
   

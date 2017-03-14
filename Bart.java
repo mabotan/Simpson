@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bart extends Player
 {
+    public GreenfootSound song;
     /**
      * Act - do whatever the Bart wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,6 +22,7 @@ public class Bart extends Player
     {
         checkHit();
         World w = getWorld();
+        
         
         /*if(w instanceof Sky){
              timeout = ((Sky)getWorld()).isTimeout();
@@ -79,6 +81,7 @@ public class Bart extends Player
             }
       public void checkHit(){
          if(isTouching(Monster.class)){
+           
            World w = getWorld();
            if(w instanceof Sky){
                 Greenfoot.setWorld (new EndGame2(((Sky)getWorld()).getScore()));
@@ -91,7 +94,10 @@ public class Bart extends Player
             }
          }
     }
-}
+    
+  
+    }
+
     
     
 
