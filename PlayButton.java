@@ -23,8 +23,9 @@ public class PlayButton extends controlTitle
     {
     if (Greenfoot.mouseClicked(this) )
 	{
-        Greenfoot.playSound("good.mp3");
-        Greenfoot.setWorld (new Sky()) ;     
+        Greenfoot.playSound("button.wav");
+        //Greenfoot.setWorld (new Sky()) ; 
+        Greenfoot.setWorld (new SelectLevel()) ;     
     }
     
     if (!mouseOver && Greenfoot.mouseMoved(this))

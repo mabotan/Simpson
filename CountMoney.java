@@ -14,9 +14,21 @@ public class CountMoney extends Actor
      */
     public void act() 
     {
+        if(getWorld() instanceof Sky){
         int score = ((Sky)getWorld()).getScore();
         Color c = new Color(255,255,255,0);
-        
         setImage(new GreenfootImage(""+score,22,Color.BLACK,c));
+        }
+        if(getWorld() instanceof Sky2){
+        int score = ((Sky2)getWorld()).getScore();
+        Color c = new Color(255,255,255,0);
+        setImage(new GreenfootImage(""+score,22,Color.BLACK,c));
+        }
+        if(getWorld() instanceof Sky3){
+        int score = ((Sky3)getWorld()).getScore();
+        Color c = new Color(255,255,255,0);
+        setImage(new GreenfootImage(""+score,22,Color.BLACK,c));
+        }
+        
     }    
 }

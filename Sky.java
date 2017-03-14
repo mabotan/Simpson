@@ -20,6 +20,7 @@ public class Sky extends World
      */
     
     int a;
+    private boolean timeout = false;
     public Sky()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -27,9 +28,9 @@ public class Sky extends World
         prepare();
         randomMonster();
         setPaintOrder(CountMoney.class,CollectMoney.class);
-        
+        this.score = 0;
 
-        a = 3000;
+        a = 12000;
     }
     
     private void prepare()
@@ -51,6 +52,14 @@ public class Sky extends World
         
         CollectMoney collectmoney = new CollectMoney();
         addObject(collectmoney, 720, 20);
+
+		Home home = new Home();
+		addObject(home, 81, 23);
+
+		Restart restart = new Restart();
+		addObject(restart, 175, 23);
+
+
     }
     
     public void act(){
@@ -60,14 +69,30 @@ public class Sky extends World
         Greenfoot.playSound("bom.mp3");
         Ammo ammo = new Ammo(mouse.getX(),mouse.getY());
         addObject(ammo, 127, 386);
-        music.playLoop();
+        
     }
-    
+    music.playLoop();
         showText("Time : "+(a--/100) , 400, 50);
+        
         if(a==0){
-            Greenfoot.setWorld(new Sky2());
+            music.stop();
+            Greenfoot.playSound("bart_job-done1.mp3");
+            Greenfoot.setWorld(new EndGame());
         }
+       
+         /*if(a==0){
+            music.stop();
+            addObject(new ScoreResult(),400,300);
+            addObject(new Win(),414,260);
+            addObject(new Home(),340,336);
+            addObject(new Restart(),478,336);
+            addObject(new CountMoney(),455,392);
+            timeout = true;
+            a=0;
+            Greenfoot.playSound("good.mp3");
+        }else a--;*/
     
+        
     }
     
     public void randomMonster(){
@@ -76,7 +101,10 @@ public class Sky extends World
         addObject(new MonFly(), 744, 196);
     }else if(m==10){
         addObject(new MonLand(), 797, 430);
+    }else if(m==10){
+        addObject(new MonBig(), 797, 430);
     }
+    
     }
     
      public void setScore(int n){
@@ -87,6 +115,10 @@ public class Sky extends World
         return score;
         
     }
+    public boolean isTimeout(){
+        return timeout;
+    }
+
 }
 
 
