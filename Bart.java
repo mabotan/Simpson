@@ -79,7 +79,16 @@ public class Bart extends Player
             }
       public void checkHit(){
          if(isTouching(Monster.class)){
-           Greenfoot.setWorld (new EndGame2());       
+           World w = getWorld();
+           if(w instanceof Sky){
+                Greenfoot.setWorld (new EndGame2(((Sky)getWorld()).getScore()));
+            }
+             if(w instanceof Sky2){
+                Greenfoot.setWorld (new EndGame2(((Sky2)getWorld()).getScore()));
+            }
+             if(w instanceof Sky3){
+                Greenfoot.setWorld (new EndGame2(((Sky3)getWorld()).getScore()));
+            }
          }
     }
 }

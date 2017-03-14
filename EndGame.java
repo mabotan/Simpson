@@ -13,7 +13,8 @@ public class EndGame extends World
      * Constructor for objects of class EndGame.
      * 
      */
-    public EndGame()
+    int score = 0;
+    public EndGame(int score)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
@@ -22,8 +23,10 @@ public class EndGame extends World
         addObject(new Win(),414,260);
         addObject(new Home(),340,336);
         addObject(new Restart(),478,336);
-        addObject(new CountMoney(),455,392);
+        this.score = score;
     }
-    
+    public void act(){
+        showText(""+score,455,392);
+    }
     
 }

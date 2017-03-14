@@ -75,7 +75,7 @@ public class Sky2 extends World
         if(a==0){
             music.stop();
              Greenfoot.playSound("bart_job-done1.mp3");
-            Greenfoot.setWorld(new EndGame());
+            Greenfoot.setWorld(new EndGame(score));
         }
        
          

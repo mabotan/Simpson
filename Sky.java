@@ -77,7 +77,7 @@ public class Sky extends World
         if(a==0){
             music.stop();
             Greenfoot.playSound("bart_job-done1.mp3");
-            Greenfoot.setWorld(new EndGame());
+            Greenfoot.setWorld(new EndGame(score));
         }
        
          /*if(a==0){
@@ -113,7 +113,6 @@ public class Sky extends World
     
     public int getScore(){
         return score;
-        
     }
     public boolean isTimeout(){
         return timeout;
