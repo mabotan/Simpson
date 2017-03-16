@@ -20,6 +20,16 @@ public class Restart extends SkyButton
     public void Restart() {
     if (Greenfoot.mouseClicked(this)){
             Greenfoot.playSound("button.wav");
+            World w = getWorld();
+            if(w instanceof Sky){
+               ((Sky)getWorld()).stop();
+            }
+            if(w instanceof Sky2){
+                 ((Sky2)getWorld()).stop();
+            }
+            if(w instanceof Sky3){
+                 ((Sky3)getWorld()).stop();
+            }
             Greenfoot.setWorld (new SelectLevel()) ;
     }
     } 

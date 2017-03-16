@@ -21,6 +21,11 @@ public class Sky extends World
     
     int a;
     private boolean timeout = false;
+    
+    public void stop(){
+        music.stop();
+    }
+    
     public Sky()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

@@ -22,8 +22,17 @@ public class Home extends SkyButton
     public void BackMenu() {
     if (Greenfoot.mouseClicked(this)){
             Greenfoot.playSound("button.wav");
-            
-            Greenfoot.setWorld (new MyWorld());
+            World w = getWorld();
+            if(w instanceof Sky){
+               ((Sky)getWorld()).stop();
+            }
+            if(w instanceof Sky2){
+                 ((Sky2)getWorld()).stop();
+            }
+            if(w instanceof Sky3){
+                 ((Sky3)getWorld()).stop();
+            }
+            Greenfoot.setWorld (new MyWorld()) ;
     }
     }
 }

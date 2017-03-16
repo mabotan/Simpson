@@ -51,6 +51,9 @@ public class Bart extends Player
                 score = ((Sky3)getWorld()).getScore();
             }
             
+            
+        
+           
         
             
             /*
@@ -81,18 +84,22 @@ public class Bart extends Player
             }
       public void checkHit(){
          if(isTouching(Monster.class)){
-           
            World w = getWorld();
+           Greenfoot.playSound("fail.mp3");
            if(w instanceof Sky){
+               ((Sky)getWorld()).stop();
                 Greenfoot.setWorld (new EndGame2(((Sky)getWorld()).getScore()));
             }
              if(w instanceof Sky2){
+                 ((Sky2)getWorld()).stop();
                 Greenfoot.setWorld (new EndGame2(((Sky2)getWorld()).getScore()));
             }
              if(w instanceof Sky3){
+                 ((Sky3)getWorld()).stop();
                 Greenfoot.setWorld (new EndGame2(((Sky3)getWorld()).getScore()));
             }
          }
+         
     }
     
   

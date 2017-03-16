@@ -21,6 +21,9 @@ public class Sky2 extends World
     
     int a;
     private boolean timeout = false;
+    public void stop(){
+        music.stop();
+    }
     public Sky2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -95,10 +98,10 @@ public class Sky2 extends World
     }
     
     public void randomMonster(){
-    int m = Greenfoot.getRandomNumber(100);
-    if(m==38){
+    int m = Greenfoot.getRandomNumber(50);
+    if(m==40){
         addObject(new MonFly(), 744, 196);
-    }else if(m==20){
+    }else if(m==35){
         addObject(new MonLand(), 797, 430);
     }
     }
