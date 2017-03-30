@@ -58,11 +58,11 @@ public class Sky extends World
         CollectMoney collectmoney = new CollectMoney();
         addObject(collectmoney, 720, 20);
 
-		Home home = new Home();
-		addObject(home, 81, 23);
+        Home home = new Home();
+        addObject(home, 81, 23);
 
-		Restart restart = new Restart();
-		addObject(restart, 175, 23);
+        Restart restart = new Restart();
+        addObject(restart, 175, 23);
 
 
     }
@@ -96,6 +96,8 @@ public class Sky extends World
             a=0;
             Greenfoot.playSound("good.mp3");
         }else a--;*/
+        
+    
   
         
     }

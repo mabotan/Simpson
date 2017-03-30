@@ -28,8 +28,8 @@ public class Ammo extends ToolMethod
                 setImage(g);
                 start++;
             }else{
-                
-            removeTouching(Monster.class);
+          
+                removeTouching(Monster.class);
             if(getWorld() instanceof Sky){
                ((Sky)getWorld()).setScore(5); 
             (getWorld()).removeObject(this); 

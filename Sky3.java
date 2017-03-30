@@ -61,6 +61,8 @@ public class Sky3 extends World
 
         Restart restart = new Restart();
         addObject(restart, 175, 23);
+        addObject(new MonBig(), 750, 400);
+  
 
     }
     
@@ -105,7 +107,7 @@ public class Sky3 extends World
         }else if(m==15){
             addObject(new MonLand(), 797, 430);
         }else if(m==5){
-            addObject(new MonBig(), 797, 373);
+            //addObject(new MonBig(), 609, 400);
     
         }
     }

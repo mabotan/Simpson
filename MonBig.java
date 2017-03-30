@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MonBig extends Monster
 {
-   private int speed = 9;
+   private int speed = 5;
     int x=1;
     int delay=5;
     int countDelay=1;
@@ -41,5 +41,13 @@ public class MonBig extends Monster
           }else{
           countDelay++;
         }
+    }
+    
+    public void dead(){
+        if(getX()==0){
+            setLocation(getWorld().getWidth(),getY());
+        }
+        
+        
     }
  }

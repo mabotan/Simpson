@@ -15,13 +15,27 @@ public class Bart extends Player
      */
     int score = 0;
     boolean timeout = false;
+    boolean canJump = true;
+    int jump = 10;
+    int count = 61;
+    int currentY = 0;
     public Bart(){
         score = 0;
     }
     public void act() 
     {
+        if(getWorld().getObjects(MonBig.class).size() == 0) getWorld(). addObject(new MonBig(), 750, 400);
+        if(currentY == 0) currentY = getY();
         checkHit();
         World w = getWorld();
+        chk();
+          if(count>0){
+          count--;
+        }
+      
+        if(count==0){
+          count=61;
+        }
         
         
         /*if(w instanceof Sky){
@@ -101,6 +115,29 @@ public class Bart extends Player
          }
          
     }
+    
+    public void chk(){
+
+        if(Greenfoot.isKeyDown("space")&&canJump){
+            for(int i =0;i<20;i++){
+                if(i<10){
+                    setLocation(getX(),getY()-i);
+                }
+            }
+         
+        // Greenfoot.playSound("Jumping.mp3");
+         
+        }
+        else{
+            if(currentY > getY() + 10){
+             
+            setLocation(getX(),getY()+6);
+           }
+        }
+
+    }
+    
+
     
   
     }
