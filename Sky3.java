@@ -11,7 +11,7 @@ public class Sky3 extends World
     public int BartPosX;
     public int BartPosY; 
     private int score=0;
-    public static GreenfootSound music = new GreenfootSound("sound.sky3.mp3");
+    public static GreenfootSound music = new GreenfootSound("Bg3.wav");
    
     
     /**
