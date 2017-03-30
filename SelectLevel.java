@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import javax.swing.JOptionPane;
 /**
  * Write a description of class SelectLevel here.
  * 
@@ -13,6 +13,7 @@ public class SelectLevel extends World
      * Constructor for objects of class SelectLevel.
      * 
      */
+    public static String name;
     public SelectLevel()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -30,6 +31,8 @@ public class SelectLevel extends World
         
         Level3 level3 = new Level3();
         addObject(level3, 608, 403);
+        name = JOptionPane.showInputDialog("Please input your name");
+        
        
     }
 }

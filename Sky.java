@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class Sky here.
  * 
@@ -57,12 +56,19 @@ public class Sky extends World
         
         CollectMoney collectmoney = new CollectMoney();
         addObject(collectmoney, 720, 20);
+        
+        GreenfootImage name = new GreenfootImage(SelectLevel.name, 30, Color.WHITE, Color.BLACK);
+        Name na = new Name();
+        na.setImage(name);
+        addObject(na, 400, 23);
 
         Home home = new Home();
         addObject(home, 81, 23);
 
         Restart restart = new Restart();
         addObject(restart, 175, 23);
+        
+         addObject(new Bomb(), getWidth()/2 , getHeight()/2 -100);
 
 
     }
@@ -104,9 +110,9 @@ public class Sky extends World
     
     public void randomMonster(){
     int m = Greenfoot.getRandomNumber(200);
-    if(m==70){
+    /*if(m==70){
         addObject(new MonFly(), 744, 196);
-    }else if(m==50){
+    }else */ if(m==50){
         addObject(new MonLand(), 797, 430);
     
     }

@@ -62,6 +62,13 @@ public class Sky3 extends World
         Restart restart = new Restart();
         addObject(restart, 175, 23);
         addObject(new MonBig(), 750, 400);
+        
+         GreenfootImage name = new GreenfootImage(SelectLevel.name, 30, Color.WHITE, Color.BLACK);
+        Name na = new Name();
+        na.setImage(name);
+        addObject(na, 400, 23);
+        
+         addObject(new Bomb(), getWidth()/2 , getHeight()/2 -100);
   
 
     }

@@ -24,7 +24,7 @@ public class Bart extends Player
     }
     public void act() 
     {
-        if(getWorld().getObjects(MonBig.class).size() == 0) getWorld(). addObject(new MonBig(), 750, 400);
+        if(getWorld().getObjects(MonBig.class).size() == 0 && getWorld() instanceof Sky3) getWorld(). addObject(new MonBig(), 750, 400);
         if(currentY == 0) currentY = getY();
         checkHit();
         World w = getWorld();
@@ -97,7 +97,7 @@ public class Bart extends Player
                 getWorld().addObject(new CountMoney(),455,392);*/
             }
       public void checkHit(){
-         if(isTouching(Monster.class)){
+         if(isTouching(Monster.class) || isTouching(Bomb.class)){
            World w = getWorld();
            Greenfoot.playSound("fail.mp3");
            if(w instanceof Sky){
