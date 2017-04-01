@@ -34,7 +34,7 @@ public class Sky extends World
         setPaintOrder(CountMoney.class,CollectMoney.class);
         this.score = 0;
 
-        a = 12000;
+        a = 500;
     }
     
     private void prepare()
@@ -109,10 +109,10 @@ public class Sky extends World
     }
     
     public void randomMonster(){
-    int m = Greenfoot.getRandomNumber(200);
+    int m = Greenfoot.getRandomNumber(50);
     /*if(m==70){
         addObject(new MonFly(), 744, 196);
-    }else */ if(m==50){
+    }else */ if(m==25){
         addObject(new MonLand(), 797, 430);
     
     }
